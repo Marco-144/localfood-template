@@ -1,6 +1,5 @@
 import type { MenuCategory } from "../types/business";
 
-import taco1 from "../assets/menu/Taco1.webp";
 import Prensado from "../assets/menu/Prensado.webp";
 import Chorizo from "../assets/menu/Chorizo.webp";
 import Costilla from "../assets/menu/Costilla.webp";
