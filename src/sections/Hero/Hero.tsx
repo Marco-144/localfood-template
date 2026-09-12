@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 
 import Container from "../../components/common/Container";
 import Button from "../../components/buttons/Button";
+import FloatingDecor from "../../components/decor/FloatingDecor";
 
 import { brand } from "../../content/brand";
 import { social } from "../../content/social";
@@ -21,6 +22,12 @@ function Hero() {
 
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.035)_1px,transparent_1px)] bg-[size:28px_28px] opacity-50" />
             </div>
+
+            <FloatingDecor items={[
+                { icon: "chili", position: "left-[6%] top-[22%]", size: "w-12 sm:w-16", color: "text-primary/25", rotate: -15, hideOnMobile: true },
+                { icon: "sparkle", position: "right-[10%] top-[16%]", size: "w-8 sm:w-10", color: "text-white/25" },
+                { icon: "herb", position: "right-[6%] bottom-[18%]", size: "w-12 sm:w-16", color: "text-secondary/25", rotate: 12, hideOnMobile: true },
+            ]} />
 
             <Container className="realtive z-10">
                 <div className="flex min-h-screen flex-col justify-center pb-16 pt-28 sm:pb-20 sm:pt-32 lg:grid lg:grid-cols-[0.9fr_1.1fr] lg:items-center lg:gap-10">

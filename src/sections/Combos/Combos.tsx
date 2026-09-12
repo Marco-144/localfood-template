@@ -3,19 +3,26 @@ import { motion } from "framer-motion";
 import Container from "../../components/common/Container";
 import Section from "../../components/common/Section";
 import ComingSoon from "../../components/common/ComingSoon";
+import FloatingDecor from "../../components/decor/FloatingDecor";
 
 import { combos } from "../../content/combos";
 
 function Combos() {
     return (
-        <Section id="combos" className="bg-background">
+        <Section id="combos" className="overflow-hidden bg-white text-black">
+
+            <FloatingDecor items={[
+                { icon: "sparkle", position: "right-[8%] top-[6%]", size: "w-10 sm:w-14", color: "text-primary/30", hideOnMobile: true },
+                { icon: "dish", position: "left-[4%] bottom-[10%]", size: "w-14 sm:w-20", color: "text-black/10" },
+            ]} />
+
             <Container>
                 <div className="mb-12 max-w-3xl">
                     <motion.p
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        className="mb-4 text-xs font-bold uppercase tracking-[0.25em] text-secondary">
+                        className="mb-4 text-xs font-bold uppercase tracking-[0.25em] text-primary">
                         Combos y paquetes
                     </motion.p>
 
@@ -23,7 +30,7 @@ function Combos() {
                         initial={{ opacity: 0, y: 25 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        className="font-display text-5xl uppercase leading-[0.9] tracking-tight sm:text-6xl">
+                        className="font-display text-5xl uppercase leading-[0.88] tracking-tight sm:text-6xl">
                         Algo bueno
                         <br />
                         se está cocinando
@@ -40,7 +47,7 @@ function Combos() {
                                     combo.items.join(" ° ")
                                 }
                             />
-                        </div> 
+                        </div>
                     ))}
                 </div>
             </Container>

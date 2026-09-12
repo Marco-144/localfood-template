@@ -10,7 +10,7 @@ function PageLayout({ children }: PageLayoutProps) {
         <div className="min-h-screen bg-background text-white antialiased">
             <Navbar />
 
-            <main>
+            <main className="overflow-hidden">
                 {children}
             </main>
         </div>
